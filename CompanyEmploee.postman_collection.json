@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "877f12ad-3ba2-4846-b712-46e02d33ed8d",
+		"name": "CompanyEmploee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Компании с работниками",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Companies/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Companies",
+						""
+					]
+				},
+				"description": "Возвращает все компании с сотрудниками"
+			},
+			"response": []
+		},
+		{
+			"name": "Добавить новую организацию",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"Рога и копыта\",\r\n    \"address\": \"Володарского 1\",\r\n    \"country\": \"Беларусь\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Companies",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Companies"
+					]
+				},
+				"description": "AddCompany\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Добавить Юзера в организацию",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CompanyName\": \"Roga\",\r\n    \"Name\":\"countryByName\",\r\n    \"Age\":\"35\",\r\n    \"Position\":\"Devaloper\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Employee",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление коллекции компаний",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"Name\": \"Очко енота\",\r\n        \"Address\": \"Volodarka\",\r\n        \"Country\": \"Belarus\"\r\n    },\r\n    {\r\n        \"Name\": \"Когото дракона\",\r\n        \"Address\": \"Volodarka\",\r\n        \"Country\": \"Belarus\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/companies/collection",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"companies",
+						"collection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление работника",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Employee/ebe1223e-7218-4b5b-8140-08d8a1025681",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Employee",
+						"ebe1223e-7218-4b5b-8140-08d8a1025681"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить компанию с сотрудниками",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Companies/803acd89-2c19-4519-8127-08d8a1893cdc",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Companies",
+						"803acd89-2c19-4519-8127-08d8a1893cdc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Обновление данных клиента",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Дмитрий\",\r\n    \"age\": 300,\r\n    \"position\": \"Devaloper\",\r\n    \"companyId\":\"c9d4c053-49b6-410c-bc78-2d54a9991870\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Employee/80abbca8-664d-4b20-b5de-024705497d4a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Employee",
+						"80abbca8-664d-4b20-b5de-024705497d4a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Обновляем компанию и задаем нового работника",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n       \"address\":\"Minsk\",\r\n        \"name\": \"Admin_Solutions Ltd, update\",\r\n        \"country\": \"USA\",\r\n        \"employees\": [\r\n            {\r\n               \r\n                \"name\": \"Kane Miller\",\r\n                \"age\": 111,\r\n                \"position\": \"Administrator\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Companies/3d490a70-94ce-4d15-9494-5248280c2ce3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Companies",
+						"3d490a70-94ce-4d15-9494-5248280c2ce3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменения HttpPatch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\": \"/position\", \r\n        \"value\":\"Грумбумбес\"\r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Employee/80abbca8-664d-4b20-b5de-024705497d4a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Employee",
+						"80abbca8-664d-4b20-b5de-024705497d4a"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
